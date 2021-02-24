@@ -31,6 +31,6 @@ with open(os.sys.argv[1], 'r') as jaif_file:
 
       srcs_list.add(SRC_PREFIX + current_package.replace('.', '/') + '/' + current_class + '.java')
 
-print '// Do not edit; generated using libcore/annotations/generate_annotated_java_files.py'
+print ('// Do not edit; generated using libcore/annotations/generate_annotated_java_files.py')
 print BP_TEMPLATE % ('\n'.join(['        "' + src_entry + '",' for src_entry in sorted(srcs_list)]),)
 os.sys.exit(0)
